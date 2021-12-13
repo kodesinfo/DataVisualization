@@ -78,3 +78,16 @@ CREATE TABLE `makedChart` (
   `source` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`idx`)
 ) ENGINE=InnoDB AUTO_INCREMENT=270 DEFAULT CHARSET=utf8 COMMENT='만들어진 Chart 정보 테이블'
+
+
+/* make User Table */
+CREATE TABLE `member` (
+  `idx` int(11) NOT NULL AUTO_INCREMENT,
+  `id` varchar(100) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  `coid` varchar(100) NOT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`idx`),
+  UNIQUE KEY `member_id_IDX` (`id`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8
