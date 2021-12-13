@@ -67,7 +67,7 @@ $(document).ready(function(){
 				<span class="icon-bar"></span>
 			</button>
 
-			<a class="navbar-brand" href="javascript:void(0);">한경CMS</a>
+			<a class="navbar-brand" href="javascript:void(0);">CMS feat ckeditor</a>
 		</div>
 
 		<div class="collapse navbar-collapse" id="CMS_navbar">
@@ -93,7 +93,6 @@ $(document).ready(function(){
 <div class="container-fluid">
 <link rel="stylesheet" href="https://wcms.hankyung.com/css/smoothness/jquery-ui-1.9.2.custom.css" >
 <link rel="stylesheet" href="https://wcms.hankyung.com/css/common.css" />
-<link rel="stylesheet" href="https://wcms.hankyung.com/css/news/news.write.css?v=20200526_1" />
 <link rel="stylesheet" href="https://wcms.hankyung.com/css/bootstrap-select.min.css" />
 <link rel="stylesheet" href="https://wcms.hankyung.com/css/datatables.min.css">
 
@@ -101,18 +100,13 @@ $(document).ready(function(){
 <script type="text/javascript" src="https://wcms.hankyung.com/js/jquery-1.12.4.min.js"></script>
 <script type="text/javascript" src="https://wcms.hankyung.com/js/jquery-ui-1.9.2.custom.js"></script>
 <script src="https://wcms.hankyung.com//js/jquery.cookie.js"></script>
-<script src="https://wcms.hankyung.com//js/datatables.min.js"></script>
 
 <!-- 에디터 스크립트 -->
 <script type="text/javascript" src="https://wcms.hankyung.com/ckeditor/ckeditor.js"></script>
-<script type="text/javascript" src="https://wcms.hankyung.com/js/editor/dialog/video.js?v=20200317_1"></script>
-<script type="text/javascript" src="https://wcms.hankyung.com/js/editor/dialog/subHeadLineStyle.js?v=20210430_1"></script>
 <script type="text/javascript" src="https://wcms.hankyung.com/js/editor/ckeditor.init.js?v=20200724_2"></script>
-<script type="text/javascript" src="https://wcms.hankyung.com/js/editor/htmltitle.init.js?v=20200221_1"></script>
 
 <script type="text/javascript" src="https://wcms.hankyung.com/js/jquery.ui.datepicker-ko.js"></script>
 <script type="text/javascript" src="https://wcms.hankyung.com/js/jquery-ui-timepicker-addon.js"></script>
-<script type="text/javascript" src="https://wcms.hankyung.com/js/news/news.write.js?v=20210727_2"></script>
 <script type="text/javascript" src="https://wcms.hankyung.com/js/SimpleDateFormat-1.0.js"></script>
 <script type="text/javascript" src="https://wcms.hankyung.com/js/bootstrap-select.min.js"></script>
 
@@ -354,53 +348,6 @@ tr {vertical-align:center;}
 #special_character_area ul li a {height:23px; width:23px; display:block; border:solid 1px #F5F5F5;}
 #special_character_area ul li a:hover {border:solid 1px #CCCCCC; text-decoration:none;}
 </style>
-
-<div class="" id="special_character_area">
-	<ul class="item-list" id="sign0">
-		<!-- 기본약물 -->
-		<li><a href="#">·</a></li>
-		<li><a href="#">…</a></li>
-
-		<li><a href="#">‘</a></li>
-		<li><a href="#">’</a></li>
-		<li><a href="#">“</a></li>
-		<li><a href="#">”</a></li>
-
-		<li><a href="#">〃</a></li>
-
-		<li><a href="#">℃</a></li>
-		<li><a href="#">㈜</a></li>
-		<li><a href="#">％</a></li>
-		<li><a href="#">ｍ</a></li>
-		<li><a href="#">ℓ</a></li>
-		<li><a href="#">㎥</a></li>
-		<li><a href="#">㎜</a></li>
-		<li><a href="#">㎝</a></li>
-		<li><a href="#">㎞</a></li>
-		<li><a href="#">㎠</a></li>
-		<li><a href="#">㎡</a></li>
-		<li><a href="#">㎢</a></li>
-		<li><a href="#">㎎</a></li>
-		<li><a href="#">㎏</a></li>
-
-		<li><a href="#">※</a></li>
-		<li><a href="#">＋</a></li>
-		<li><a href="#">－</a></li>
-		<li><a href="#">±</a></li>
-		<li><a href="#">×</a></li>
-		<li><a href="#">÷</a></li>
-
-		<li><a href="#">↑</a></li>
-		<li><a href="#">→</a></li>
-		<li><a href="#">↓</a></li>
-		<li><a href="#">←</a></li>
-
-		<li><a href="#">▲</a></li>
-		<li><a href="#">▶</a></li>
-		<li><a href="#">▼</a></li>
-		<li><a href="#">◀</a></li>
-	</ul>
-</div>
 
                         <!-- 2018-09-27 본문 편집기 S-->
                         <textarea name="textcontent" id="textcontent">
@@ -743,22 +690,18 @@ tr {vertical-align:center;}
 }
 </style>
 
-<div id="progressModal">
-	<img src="/img/loading.gif">
-</div>
 </div>
 <!-- // 2018-09-20 콘텐츠 컨테이너 E -->
 
 <script type="text/javascript">
-
 var type;
 
 //팝업창 변수
 var isPopup = false;
 
 // 편집자 이름
-var editorName = "임성묵";
-var editorDept = "IT Labs부";
+var editorName = "";
+var editorDept = "";
 
 
 // chart 팝업 데이터 연동
