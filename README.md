@@ -37,11 +37,8 @@
 
 6) Directory 설명
 ─┬─ Class               웹사이트 프로그램 Class 폴더
-
- ├─ config              프로그램 세팅 폴더
- 
+ ├─ config              프로그램 세팅 폴더 
  ├─ cron                자동실행 프로그램 폴더
- 
  └─ web ┐
         ├─ _compile     _template compile된  폴더 (mode : 777)
         ├─ _template    _template template  폴더
