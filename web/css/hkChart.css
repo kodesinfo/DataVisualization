@@ -1,0 +1,115 @@
+.popover{width: 250px;max-width: 100%;}
+.popover input{width:100px;}
+
+.card {
+    border: none;
+    -webkit-box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+	margin-bottom:20px;
+}
+.card-heading {
+    margin-bottom: 0;
+    font-size: .9rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+}
+.card-header {
+    position: relative;
+    padding: 1.5rem;
+    border-bottom: none;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 8%);
+    box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 8%);
+    z-index: 2;
+}
+.card-header:first-child {
+    border-radius: calc(1rem - 1px) calc(1rem - 1px) 0 0;
+}
+.card-body {
+    flex: 1 1 auto;
+    padding: 1.5rem;
+}
+
+.select2 {padding-left:0;padding-right:0; margin-right:5px;}
+.form-control-color {width:2rem;height:28px;padding:0;overflow:hidden;}
+#tableTool{height: 30px;width:100%; margin-top: 7px; margin-bottom: 7px;display: flex;justify-content: flex-end;}
+#tableTool #excelFile {width:50%;}
+#displayData{height: 325px;overflow:auto;}
+
+.tableButton {float:right;}
+.contextmenu {
+  display: none;
+  position: absolute;
+  width: 200px;
+  margin: 0;
+  padding: 0;
+  background: #FFFFFF;
+  border-radius: 5px;
+  list-style: none;
+  box-shadow:
+    0 15px 35px rgba(50,50,90,0.1),
+    0 5px 15px rgba(0,0,0,0.07);
+  overflow: hidden;
+  z-index: 999999;
+}
+
+.contextmenu li {
+  border-left: 3px solid transparent;
+  transition: ease .2s;
+  padding:5px;
+  padding-bottom: 0px;
+}
+
+.contextmenu li:last-child {
+	padding-bottom: 10px;
+}
+
+.contextmenu li a {
+  display: block;
+  padding: 10px;
+  color: #B0BEC5;
+  text-decoration: none;
+  transition: ease .2s;
+}
+
+.contextmenu li:not(:last-child):hover {
+  background: #CE93D8;
+  border-left: 3px solid #9C27B0;
+}
+
+.contextmenu li:hover a {
+  color: #FFFFFF;
+}
+
+.tableButton svg{
+	border-radius: 4px;
+}
+
+.tableButton svg:hover{
+	background-color:#ddd;
+}
+.graphImage{width:30px;height:30px;}
+.graphKind {width:30px;height:30px;float: right; cursor: pointer;}
+
+.select2-container{z-index:999999;}
+
+.clr-picker{z-index: 9999998;}
+.full .clr-field button {
+      width: 40px;
+      height: 100%;
+      border-radius: 5px;
+    }
+ .full .clr-field input{width: 40px;}
+
+#makedList {position: absolute ;top: 10px;left: 13px;z-index: 999999;box-shadow: 0.5rem 0.5rem 1.5rem 0.3rem rgb(0 0 0 / 15%);}
+#makedList>.card-header{padding: 1rem;}
+#makedList .card-header{display: flex;justify-content: space-between;align-items: center;}
+#makedList>.card-body{padding:0.5rem;}
+#makedList .makedSearch {width:250px; margin-left: 190px;}
+#makedListTable tbody tr {cursor: pointer;}
+#clr-picker {z-index: 999999;}
+#displayData {max-width:468px;}
+#displayData table th {word-break:keep-all;}
+#displayData table td:first-child {word-break:keep-all;white-space: nowrap;}
+#displayData table td {min-width:110px;}
