@@ -1,0 +1,49 @@
+{# top}
+<script type="text/javascript">
+var chart="";
+
+$(document).ready(function(){
+	$('#btnSaveDomain').click(function(){
+		saveDomain();
+	});
+});
+
+function saveDomain(){
+	var data = {};
+	data['allowDomain'] = $("#allowDomain").val();
+	$.ajax({
+		url: "/api/saveAllowDomain",
+		data : data,
+		method : 'POST',
+		dataType : "json"
+	}).done(function(data){
+		alert('저장되었습니다.');
+	});
+}
+</script>
+<body>
+	{#left}
+	{#header}
+	{#right}
+	
+<!-- ########## START: MAIN PANEL ########## -->
+
+<div class="br-mainpanel">
+    <div class="br-pagebody">
+        <div class="br-section-wrapper pd-10-force">
+			<h3>Domain 허용</h3>
+			<div class="row pd-20">
+				<textarea class="form-control" id="allowDomain" rows="15">{list.allowDomain}</textarea>
+			</div>
+
+			<div class="row pd-l-10 mg-b-20">
+				<div style="float:left;margin-left:50px;">
+					<button type="button" class="btn btn-primary" id="btnSaveDomain"><i class="fa fa-save"></i> 저장</button>
+				</div>
+			</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
