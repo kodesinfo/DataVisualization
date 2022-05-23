@@ -250,7 +250,7 @@ class Chart
             mkdir($directory, 0777, true);
         }
 
-		$_POST['html']='<html lang="ko"><head><meta charset="utf-8"><title>hankyung.com</title><script src="//static.hankyung.com/plugin/jquery-1.12.4.min.js"></script><script src="https://cdn.jsdelivr.net/npm/chart.js"></script></head><body><canvas id="chart"></canvas>'.$_POST['html'].'</body></html>';
+		$_POST['html']='<html lang="ko"><head><meta charset="utf-8"><title>chart</title><script src="/plugin/jquery-1.12.4.min.js"></script><script src="https://cdn.jsdelivr.net/npm/chart.js"></script></head><body><canvas id="chart"></canvas>'.$_POST['html'].'</body></html>';
 		echo $directory;
 		file_put_contents($directory.$fileName, $_POST['html']);
 	}
@@ -569,7 +569,7 @@ class Chart
             mkdir($directory, 0777, true);
         }
 
-		$_POST['html']='<html lang="ko"><head><meta charset="utf-8"><title>hankyung.com</title><script src="//static.hankyung.com/plugin/jquery-1.12.4.min.js"></script><script src="https://cdn.jsdelivr.net/npm/chart.js"></script></head><body><canvas id="chart"></canvas>'.$_POST['html'].'</body></html>';
+		$_POST['html']='<html lang="ko"><head><meta charset="utf-8"><title>chart</title><script src="/plugin/jquery-1.12.4.min.js"></script><script src="https://cdn.jsdelivr.net/npm/chart.js"></script></head><body><canvas id="chart"></canvas>'.$_POST['html'].'</body></html>';
 		echo $directory;
 		file_put_contents($directory.$fileName, $_POST['html']);
 	}
