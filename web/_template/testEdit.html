@@ -8,7 +8,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>한경CMS | 한국경제신문</title>
+<title>CMS</title>
 
 <link href="/css/bootstrap.min.css?v=20191230_1" rel="stylesheet">
 <link href="/css/jquery-ui.min.css" rel="stylesheet">
@@ -29,11 +29,6 @@ var wss_uri = '';
 
 <script type="text/javascript" src="/js/jquery.notify.min.js"></script>
 <link href="/css/ui.notify.css" rel="stylesheet">
-
-<!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
 
 <script>
 // 로그아웃
@@ -340,7 +335,7 @@ tr {vertical-align:center;}
                     <td>
 <style>
 #special_character_area {display:none; border:1px solid #CCCCCC; padding:5px;background-color:#F5F5F5;}
-#special_character_area ul {list-style:none outside none; width:100%; overflow:hidden; margin:0; display:none; font-family:'한경본문고딕', '한경본문고딕 BG'; padding:0;}
+#special_character_area ul {list-style:none outside none; width:100%; overflow:hidden; margin:0; display:none; font-family:'고딕', '고딕 BG'; padding:0;}
 #special_character_area #sign0 {display:block;}
 #special_character_area ul li {float:left; width:25px; height:25px; text-align:center; font-size:16px;}
 #special_character_area ul li a {height:23px; width:23px; display:block; border:solid 1px #F5F5F5;}
@@ -356,7 +351,6 @@ tr {vertical-align:center;}
 전 사업 부문이 고르게 성장했다. 콘텐츠 사업 매출은 1841억원으로 전년 동기보다 60.2% 늘었다. 글로벌 콘텐츠를 확대한 웹툰은 79%의 매출 증가세를 보였고 스노우도 글로벌에서 카메라 서비스와 제페토가 성장하면서 매출이 2배 이상 뛰었다.<br /><br />
 커머스 매출은 쇼핑라이브, 브랜드스토어, 스마트스토어 성장에 힘입어 33.2% 증가한 3803억원을 기록했다. 브랜드스토어는 550여 개로 확대되며 거래액이 3배 이상 확대됐고 쇼핑라이브도 100만뷰 이상 초대형 라이브, 분기 100억 매출 브랜드가 등장하며 거래액이 13배 급증했다.
 <br /><br />
-강경주 한경닷컴 기자 qurasoha@hankyung.com
 
                         </textarea>
                         <!-- 2018-09-27 본문 편집기 E-->
@@ -701,14 +695,6 @@ var isPopup = false;
 var editorName = "";
 var editorDept = "";
 
-
-// chart 팝업 데이터 연동
-window.onmessage = function(e){
-	if(e.origin === "https://indicator.hankyung.com"){
-		setEditInserHtml(e.data);
-	}
-}
-
 // 겸직정보 세팅
 var subUse = "";
 var subEmail = "";
@@ -741,7 +727,7 @@ $('#preview').on("click",function(){
 	var html = CKEDITOR.instances.textcontent.getData();
 
 	$('#hContent').val(html);
-	$("#hiddenForm").attr("action", "https://indicator.hankyung.com/preView");
+	$("#hiddenForm").attr("action", "/preView");
 	$("#hiddenForm").attr("target", "preview_pc");
 	$('#hiddenForm').submit();
 
