@@ -42,7 +42,7 @@ class Login
 				$tmp.= $row[0]['name']. "::";
 				$tmp.= $row[0]['email'];
 
-				setcookie("datachart", $this->crypt_md5($tmp, "datachart"), 0, "/", ".hankyung.com", false, true);
+				setcookie("datachart", $this->crypt_md5($tmp, "datachart"), 0, "/", "", false, true);
 				$row[0]['moveTo']="/api/list";
 			}
 			echo json_encode($row[0]);
@@ -57,12 +57,8 @@ class Login
     * @return
     */
 	function loginInfo(){
-		$_SESSION['userId']= $tmp[0];
-		$_SESSION['userName']= $tmp[1];
-		$_SESSION['userEmail']= $tmp[2];
-
 		if($_SESSION['userId']=="" ||  $_SESSION['userName']==""){
-			 echo "<script>top.location.href='https://hkicms.hankyung.com/login';window.close();</script>";
+			header("Location : /login");
 			die();
 		}
 	}
@@ -76,9 +72,8 @@ class Login
 		$_SESSION['userId']="";
 		$_SESSION['userName']="";
 		$_SESSION['userEmail']="";
-		setcookie("datachart", "", 0, "/", ".hankyung.com", false, true);
 		session_unset();
-		header("Location: https://indicator.hankyung.com/login");
+		header("Location: /login");
 	}
 }
 ?>
