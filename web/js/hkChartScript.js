@@ -273,7 +273,7 @@ function tableDraw(table){
 			script += 'chart.update();';
 		}else{
 			script +='$.ajax({'
-						+'url: "https://indicator.hankyung.com/hkapi/get?id='+$('#dataKind').find(':selected').attr('data-table')+'&axisY='+$('#field1').val()+'&axisX='+$('#field2').val()+'&startDate='+$('#startDate').val()+'",'
+						+'url: "/api/get?id='+$('#dataKind').find(':selected').attr('data-table')+'&axisY='+$('#field1').val()+'&axisX='+$('#field2').val()+'&startDate='+$('#startDate').val()+'",'
 						+'method : "GET",'
 						+'dataType : "json"'
 						+'}).done(function(data){'
@@ -454,7 +454,7 @@ function canvasToFile(){
 	}).done(function(data){
 		var idx = $("#gIdx").val();
 		var makeDate = $("#makeDate").val();
-		window.opener.postMessage("<iframe frameborder='0' width='600px' height='400px' src='https://indicator.hankyung.com/data/"+makeDate+"/"+idx+".html' data-img='https://img.hankyung.com/photo/chartimage/"+makeDate+"/"+idx+".png' data-thumb='https://img.hankyung.com/photo/chartimage/"+makeDate+"/"+idx+"_thumb.png'></iframe><br /><br />", "*");
+		window.opener.postMessage("<iframe frameborder='0' width='600px' height='400px' src='/data/"+makeDate+"/"+idx+".html' data-img='/photo/chartimage/"+makeDate+"/"+idx+".png' data-thumb='/photo/chartimage/"+makeDate+"/"+idx+"_thumb.png'></iframe><br /><br />", "*");
 		window.close();
 	});
 }
